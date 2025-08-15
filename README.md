@@ -29,6 +29,11 @@ Users should be able to:
 - [Deskto View Active](./src/screenshot/desktop-view-active.jpg)
 - [Mobile View](./src/screenshot/mobile-view.jpg)
 
+### Links
+
+- [Solution URL](https://github.com/eseodiase/nft-card)
+- [Live Site URL](https://eseodiase.github.io/nft-card/)
+
 ## My process
 
 ### Built with
