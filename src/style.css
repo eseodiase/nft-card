@@ -1,0 +1,172 @@
+    /*
+      Author: Ese Odiase 
+      LinkedIn: https://ng.linkedin.com/in/ese-g-odiase-220576196
+      */
+    
+    /* Google Font, Outfit */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
+    /* CSS custom properties */
+    :root {
+      /* Primary colors */
+      --Blue500: hsl(215, 51%, 70%);
+      --Cyan400: hsl(178, 100%, 50%);
+      
+      /* Neutral */
+      --Blue950main: hsl(217, 54%, 11%);
+      --Blue900card: hsl(216, 50%, 16%);
+      --Blue800line: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+      --Link-color: hsl(228, 45%, 44%);
+      
+      /* Font sizes */
+      --Primary-font-size: calc (1rem + 0.2vw);
+      --Footer-font-size: 0.6875rem;
+      
+      /* Borders */
+      --Border-radius10: 0.625rem;
+      --Border-radius20: 1.25rem;
+      --Border-radius50: 3.125rem;
+      --Border-line: 0.0625rem solid var(--Blue800line);
+      --Border-avatar: 0.0625rem solid var(--White);
+    }
+    
+    /* Mobile first workflow */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--Primary-font-size);
+      font-weight: 400;
+      background: var(--Blue950main);
+      color: var(--Blue500);
+    }
+    
+    .header {
+      display: none;
+    }
+    
+    .main {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* BEM naming convention */
+    .nft-card {
+      margin-inline: 1.875rem;
+      margin-block: 3.75rem;
+      background: var(--Blue900card);
+      border-radius: var(--Border-radius20);
+      width: 20.625rem;
+    }
+    
+    .nft-card__picture,
+    .nft-card__hidden,
+    .nft-card__heading,
+    .nft-card__text,
+    .nft-card__price,
+    .nft-card__profile {
+      margin-inline: 1.3125rem;
+    }
+    
+    .nft-card__img {
+      margin-block-start: 1.3125rem;
+      width: 18rem;
+      height: 18rem;
+      border-radius: var(--Border-radius10);
+    }
+    
+    .nft-card__hidden {
+      margin-block-start: -18.25rem;
+      width: 18rem;
+      height: 18rem;
+      border-radius: var(--Border-radius10);
+      background: var(--Cyan400);
+      display: none;
+    }
+    
+    .nft-card__heading {
+      color: var(--White);
+      margin-block-end: -0.25rem;
+      font-weight: 600;
+    }
+    
+    .nft-card__text {
+      line-height: 1.6;
+      margin-block-end: -0.125rem;
+    }
+    
+    .nft-card__price {
+      border-bottom: var(--Border-line);
+      display: flex;
+      justify-content: space-between;
+      margin-block-end: 1.3125rem;
+    }
+    
+    .nft-card__coin {
+      color: var(--Cyan400);
+      font-weight: 600;
+    }
+    
+    .nft-card__eth,
+    .nft-card__clock {
+      margin-inline-end: 0.25rem;
+    }
+    
+    .nft-card__profile {
+      display: flex;
+      align-items: flex-start;
+      margin-block-end: 1.3125rem;
+      gap: 1rem;
+    }
+    
+    .nft-card__avatar {
+      border-radius: var(--Border-radius50);
+      border: var(--Border-avatar);
+    }
+    
+    .nft-card__creator {
+      align-self: center;
+      line-height: 0;
+    }
+    
+    .nft-card__name {
+      color: var(--White);
+    }
+    
+    /* Breakpoint for large devices */
+    @media (min-width: 48rem) {
+    .nft-card__picture:hover ~ .nft-card__hidden {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .nft-card__img:hover {
+      opacity: 0.5;
+    }
+    
+    .nft-card__view {
+      z-index: 999;
+    }
+    
+    .nft-card__heading:hover,
+    .nft-card__name:hover {
+      color: var(--Cyan400);
+      cursor: pointer;
+    }
+    }
+    
+    .footer {
+      display: none;
+      font-size: var(--Footer-font-size);
+      text-align: center;
+    }
+    
+    .footer a {
+      color: var(--Link-color);
+    }
