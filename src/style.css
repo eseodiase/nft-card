@@ -55,7 +55,7 @@
     }
     
     /* BEM naming convention */
-    .nft-card {
+    .nft-card { /* Block */
       margin-inline: 1.875rem;
       margin-block: 3.75rem;
       background: var(--Blue900card);
